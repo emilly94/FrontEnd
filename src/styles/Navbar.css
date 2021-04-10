@@ -1,0 +1,42 @@
+
+/* - HEADER - */
+#navbar {
+  /* background-color: #999; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+#navbar img {
+  width: 150px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list .nav-item {
+  margin-right: 40px;
+}
+
+.nav-list .nav-item a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.nav-list .nav-item.active {
+  font-weight: 700;
+}
+
+/* main {
+  max-width: 1400px;
+  display: block;
+  margin: 0 auto;
+} */

@@ -1,0 +1,29 @@
+.loader {
+  height: calc(100vh - 300px);
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: block;
+  max-width: 1120px;
+  margin: 40px auto;
+}
+
+.container h1 {
+  text-align: center;
+  color: #fff;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  list-style: none;
+  margin-top: 40px;
+}
