@@ -14,7 +14,6 @@ return(
     <span id="deaths">{deaths} <span>deaths </span></span>
   </div>
 </li>
-)
-}
+)}
 
 export default CountryItems;

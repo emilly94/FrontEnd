@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import Loader from "react-loader-spinner";
+
 import CountryItems from '../components/CountryItems';
-import Navbar from '../components/Navbar';
 import '../styles/Dashboard.css';
-import '../styles/Navbar.css';
 
 const Dashboard = () => {
   const [countries, setCountries] = useState([]);
@@ -16,21 +16,28 @@ const Dashboard = () => {
 
 return(
   <>
-  <Navbar/>
   <div className="container"> 
     <h1>Dados Covid-19</h1>
     <ul className="list">
-      {countries.map((country, index) => (
+      {countries.length !== 0 ? countries.map((country, index) => (
           <CountryItems
             key={index}
             name={country.Country}
             totalCases={country.TotalConfirmed} 
             recovered={country.TotalRecovered} 
-            deaths={country.TotalDeaths}/>)
-        )} 
+            deaths={country.TotalDeaths}/>
+            )) : (
+              <div className="loader">
+                <Loader
+                  type="TailSpin"
+                  color="#00BFFF"
+                  height={100}
+                  width={100}
+              />
+              </div>
+        ) } 
     </ul>
   </div>
   </>
-)
-}
+)}
 export default Dashboard;
